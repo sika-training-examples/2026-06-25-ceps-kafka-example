@@ -12,6 +12,10 @@ spec:
         port: 9092
         type: internal
         tls: false
+      - name: lb
+        port: 9093
+        type: loadbalancer
+        tls: false
   entityOperator:
     topicOperator: {}
     userOperator: {}
