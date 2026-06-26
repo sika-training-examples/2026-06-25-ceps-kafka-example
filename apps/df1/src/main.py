@@ -14,7 +14,7 @@ def main():
 
     i = 0
     while True:
-        key = str(i)
+        key = os.environ.get("HOSTNAME") + "-" + str(i)
         msg = json.dumps({
           "i": i,
           "hostname": os.environ.get("HOSTNAME"),
@@ -26,7 +26,7 @@ def main():
         }
         p.produce(TOPIC, key=key, value=msg, headers=headers)
         p.flush()
-        print(f"produced: key={key} msg={msg}")
+        print(f"produced: key={key} msg={msg}", flush=True)
         i += 1
         time.sleep(1)
 

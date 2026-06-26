@@ -1,7 +1,7 @@
 -include .env
 export
 
-IMAGE=ttl.sh/ceps/df1:v2
+IMAGE=ttl.sh/ceps/df1:v4
 
 run:
 	uv run python main.py
