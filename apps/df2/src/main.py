@@ -39,7 +39,7 @@ def main():
         }
         p.produce(TOPIC_OUT, key=key, value=newValue, headers=headers)
         p.flush()
-        print(f"consumed: key={key}")
+        print(f"consumed: key={key}", flush=True)
 
 
 if __name__ == "__main__":
